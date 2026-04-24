@@ -2,3 +2,54 @@
 <html>
 <head>
     <title>Unbranding UPS</title>
+
+    <!--
+    This project unbrands UPS by changing its image of efficiency and reliability into a critique
+    of pressure and negative outcomes. The hover effect reveals a more critical version of the brand.
+    -->
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .hero {
+            height: 100vh;
+            text-align: center;
+            background-color: #7e5844;
+            padding-top: 100px;
+        }
+
+        img {
+            width: 500px; /* MUCH bigger */
+            max-width: 90%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+
+        <img id="upsImage" src="ups-original.png" alt="UPS logo">
+
+    </div>
+
+    <script>
+        // Get the image element
+        var image = document.getElementById("upsImage");
+
+        // When mouse is over the image
+        image.onmouseover = function() {
+            image.src = "UPS-fake.png";
+        };
+
+        // When mouse leaves the image
+        image.onmouseout = function() {
+            image.src = "ups-original.png";
+        };
+    </script>
+
+</body>
+</html>
