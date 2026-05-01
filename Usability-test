@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google Maps Usability Test Report</title>
+
+  <!-- 
+  Creative Choices Reflection:
+  I designed this website as a clean usability report with a simple Bootstrap layout so the findings are easy to read. I used cards, tables, screenshots, and clear section headings to organize the testing process, user results, and final analysis. The goal was to make the report feel professional while still being easy for a regular reader to understand. The SUS calculator makes the page interactive and connects directly to the usability testing method used in the project.
+  -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .hero {
+      background-color: #0d6efd;
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .section {
+      padding: 50px 0;
+    }
+
+    .task-img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .card {
+      margin-bottom: 25px;
+    }
+
+    footer {
+      background-color: #212529;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="hero">
+    <h1>Google Maps Usability Test Report</h1>
+    <p class="lead">Testing how users complete common location-based tasks on Google Maps</p>
+  </header>
+
+  <main class="container">
+
+    <section class="section">
+      <h2>Project Overview</h2>
+      <p>
+        For this usability test, I tested Google Maps to see how easily users could complete common tasks.
+        The goal was to observe what users did successfully, where they struggled, and how long each task took.
+        I tested two users and asked them to complete five tasks using Google Maps.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Wireframes</h2>
+      <p>
+        Before building the final website, I created two wireframes: one hand-drawn draft and one Figma draft.
+        These wireframes helped me plan the layout of the report, including the task cards, findings section,
+        screenshots, and SUS calculator.
+      </p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <img src="images/analog-wireframe.jpg" alt="Hand drawn wireframe for usability report website" class="task-img">
+          <p class="mt-2"><strong>Analog Wireframe</strong></p>
+        </div>
+
+        <div class="col-md-6">
+          <img src="images/figma-wireframe.jpg" alt="Figma wireframe for usability report website" class="task-img">
+          <p class="mt-2"><strong>Figma Wireframe</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Usability Test Tasks</h2>
+
+      <div class="card">
+        <div class="card-body">
+          <h3>Task 1: Add a Missing Place</h3>
+          <img src="images/task1.jpg" alt="Google Maps add missing place screen" class="task-img mb-3">
+          <p><strong>Time:</strong> User 1 completed this task successfully. User 2 found it quickly.</p>
+          <p>
+            Users were asked to find where they could add a location of their choice and enter location details.
+            User 1 was able to add a missing place, enter the name, place details, and other information.
+            They noticed they could add a phone number and name but did not want to include that information.
+            User 2 found the add missing place option quickly and had little trouble with this task.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h3>Task 2: Find the Closest Museum</h3>
+          <img src="images/task2.jpg" alt="Google Maps search results for closest museum" class="task-img mb-3">
+          <p><strong>Result:</strong> Fredericksburg Area Museum, 1.1 miles away.</p>
+          <p>
+            Users were asked to find the closest museum and the exact distance. Both users were able to complete
+            this task quickly. The search results were clear, and the distance information was easy to locate.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h3>Task 3: Find the Closest Olive Garden</h3>
+          <img src="images/task3.jpg" alt="Google Maps Olive Garden search result" class="task-img mb-3">
+          <p><strong>Result:</strong> 2811 Plank Road, closes at 10 PM.</p>
+          <p>
+            Users were asked to find the closest Olive Garden and identify what time it closes.
+            User 1 completed this task successfully. User 2 struggled more with this part because finding
+            the exact restaurant information took longer than expected.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h3>Task 4: Walking Directions from Olive Garden to Target</h3>
+          <img src="images/task4.jpg" alt="Google Maps walking directions from Olive Garden to Target" class="task-img mb-3">
+          <p><strong>Result:</strong> 23 minutes, about 1 mile.</p>
+          <p>
+            Users were asked to find out how long it would take to walk from Olive Garden to the closest Target.
+            Once the users had the Olive Garden location, they were able to use directions to find the walking time.
+            This task was completed successfully, but it required more steps than some of the earlier tasks.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h3>Task 5: Correct a Name on Google Maps</h3>
+          <img src="images/task5.jpg" alt="Google Maps suggest an edit option" class="task-img mb-3">
+          <p><strong>Time:</strong> User 1 finished at 6:28. User 2 finished at 4:44.</p>
+          <p>
+            Users were asked to try to correct a name on Google Maps. This task was more confusing than the others.
+            The users had to find the edit or suggest an edit option, which was not as obvious as searching for a place.
+            User 2 completed the whole test faster overall, while User 1 took more time working through the steps.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Test Results Summary</h2>
+
+      <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+          <tr>
+            <th>User</th>
+            <th>Strengths</th>
+            <th>Struggles</th>
+            <th>Ending Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>User 1</td>
+            <td>Completed the location, museum, Olive Garden, and walking direction tasks.</td>
+            <td>Had some trouble with editing or correcting a name.</td>
+            <td>6:28</td>
+          </tr>
+          <tr>
+            <td>User 2</td>
+            <td>Found the missing place option and museum quickly.</td>
+            <td>Struggled with finding Olive Garden information.</td>
+            <td>4:44</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Overall, Google Maps worked well for basic search tasks like finding museums, restaurants, and directions.
+        The harder tasks were the ones that required users to edit information or find a less obvious feature.
+        This shows that Google Maps is strong for searching and navigation, but some contribution tools could be easier to find.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Interactive SUS Calculator</h2>
+      <p>
+        The System Usability Scale, or SUS, is a 10-question survey used to measure how usable a system feels.
+        Enter a score from 1 to 5 for each question, then click the button to calculate the final SUS score.
+      </p>
+
+      <form id="susForm" class="row g-3">
+
+        <div class="col-md-6">
+          <label class="form-label">1. I would use this website frequently.</label>
+          <input type="number" class="form-control sus-input" min="1" max="5">
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">2. The website was unnecessarily complex.</label>
+          <input type="number" class="form-control sus-input" min="1" max="5">
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">3. The website was easy to use.</label>
+          <input type="number" class="form-control sus-input" min="1" max="5">
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">4. I would need help to use this website.</label>
+          <input type="number" class="form-control sus-input" min="1" max="5">
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">5. The website features worked well together.</label>
+          <input type="number" class="form-control sus-input" min="1" max="5">
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">6. There was too much inconsistency.</label>
+          <input type="number" class="form-control sus-input" min="1" max="5">
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">7. Most people would learn this quickly.</label>
+          <input type="number" class="form-control sus-input" min="1" max="5">
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">8. The website felt awkward to use.</label>
+          <input type="number" class="form-control sus-input" min="1" max="5">
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">9. I felt confident using the website.</label>
+          <input type="number" class="form-control sus-input" min="1" max="5">
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">10. I needed to learn a lot before using it.</label>
+          <input type="number" class="form-control sus-input" min="1" max="5">
+        </div>
+
+        <div class="col-12">
+          <button type="button" class="btn btn-primary" onclick="calculateSUS()">Calculate SUS Score</button>
+        </div>
+
+        <div class="col-12">
+          <h3 id="susResult" class="mt-3"></h3>
+        </div>
+
+      </form>
+    </section>
+
+    <section class="section">
+      <h2>Conclusion</h2>
+      <p>
+        This usability test showed that Google Maps is mostly easy to use for normal search and direction tasks.
+        Both users were able to complete most tasks without major problems. The main issues happened when users had
+        to find less common tools, like correcting a name or adding detailed location information. Based on this test,
+        Google Maps has a strong design for everyday navigation, but some editing features could be made more visible.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Google Maps Usability Test Report</p>
+  </footer>
+
+  <script>
+    function calculateSUS() {
+      var inputs = document.querySelectorAll(".sus-input");
+      var total = 0;
+
+      for (var i = 0; i < inputs.length; i++) {
+        var value = Number(inputs[i].value);
+
+        if (value < 1 || value > 5 || inputs[i].value === "") {
+          document.getElementById("susResult").innerHTML = "Please enter a number from 1 to 5 for every question.";
+          return;
+        }
+
+        if (i % 2 === 0) {
+          total += value - 1;
+        } else {
+          total += 5 - value;
+        }
+      }
+
+      var susScore = total * 2.5;
+      document.getElementById("susResult").innerHTML = "SUS Score: " + susScore;
+    }
+  </script>
+
+</body>
+</html>
