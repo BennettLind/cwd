@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+  <title>Google Maps Usability Test</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: lightgray;
+      font-family: Arial;
+    }
+
+    img {
+      width: 100%;
+      max-width: 500px;
+      margin-bottom: 15px;
+    }
+
+    .box {
+      background-color: white;
+      padding: 20px;
+      margin: 20px;
+      border: 1px solid gray;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="box">
+    <h1>Google Maps Usability Test</h1>
+    <p>This shows results from one usability test.</p>
+  </div>
+
+  <div class="box">
+    <h2>Tasks</h2>
+    <ol>
+      <li>Add a location</li>
+      <li>Find closest museum</li>
+      <li>Find Olive Garden + closing time</li>
+      <li>Find walking time to Target</li>
+      <li>Try to correct a name</li>
+    </ol>
+  </div>
+
+  <div class="box">
+    <h2>Task 1</h2>
+    <img src="MissingPlace.png" alt="Add missing place">
+    <p>User found add missing place and added details. Did not want to add phone or name.</p>
+  </div>
+
+  <div class="box">
+    <h2>Task 2</h2>
+    <img src="museumwalk.png" alt="Museum result">
+    <p>Fredericksburg Area Museum, 1.1 miles away. Easy to find.</p>
+  </div>
+
+  <div class="box">
+    <h2>Task 3</h2>
+    <img src="Olivegarden.png" alt="Olive Garden">
+    <p>2811 Plank Road, closes at 10 PM.</p>
+  </div>
+
+  <div class="box">
+    <h2>Task 4</h2>
+    <img src="target.png" alt="Walking directions">
+    <p>23 minutes walking, about 1 mile.</p>
+  </div>
+
+  <div class="box">
+    <h2>Task 5</h2>
+    <p>Hardest task. Edit option was hard to find. Final time: 6:28.</p>
+  </div>
+
+  <div class="box">
+    <h2>Summary</h2>
+    <p>
+      Google Maps is easy for searching and directions.
+      Harder for editing features.
+    </p>
+  </div>
+
+  <div class="box">
+    <h2>SUS Calculator</h2>
+
+    <input class="sus form-control" type="number" min="1" max="5" value="3"><br>
+    <input class="sus form-control" type="number" min="1" max="5" value="2"><br>
+    <input class="sus form-control" type="number" min="1" max="5" value="2"><br>
+    <input class="sus form-control" type="number" min="1" max="5" value="1"><br>
+    <input class="sus form-control" type="number" min="1" max="5" value="3"><br>
+    <input class="sus form-control" type="number" min="1" max="5" value="2"><br>
+    <input class="sus form-control" type="number" min="1" max="5" value="4"><br>
+    <input class="sus form-control" type="number" min="1" max="5"><br>
+    <input class="sus form-control" type="number" min="1" max="5"><br>
+    <input class="sus form-control" type="number" min="1" max="5"><br>
+
+    <button class="btn btn-primary" onclick="calc()">Calculate</button>
+
+    <h3 id="result"></h3>
+  </div>
+
+</div>
+
+<script>
+function calc() {
+  var inputs = document.querySelectorAll(".sus");
+  var total = 0;
+
+  for (var i = 0; i < inputs.length; i++) {
+    var val = Number(inputs[i].value);
+
+    if (!val || val < 1 || val > 5) {
+      document.getElementById("result").innerHTML = "Fill all boxes 1-5";
+      return;
+    }
+
+    if (i % 2 == 0) {
+      total += val - 1;
+    } else {
+      total += 5 - val;
+    }
+  }
+
+  document.getElementById("result").innerHTML = "SUS Score: " + (total * 2.5);
+}
+</script>
+
+</body>
+</html>
